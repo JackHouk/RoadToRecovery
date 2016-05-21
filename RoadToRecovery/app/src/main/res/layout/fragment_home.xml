@@ -11,13 +11,44 @@
         android:layout_width="match_parent"
         android:layout_height="156dp"
         android:layout_gravity="center_horizontal|top"
-        android:background="@color/accent_material_dark"></LinearLayout>
+        android:background="@color/accent_material_dark">
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageButton"
+            android:background="@mipmap/hback"
+            android:focusable="false"
+            android:cropToPadding="false" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:background="@color/material_blue_grey_800"></LinearLayout>
+        android:background="@color/material_blue_grey_800">
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/proImage"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/hback"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@android:color/holo_blue_dark"
+        android:weightSum="1">
+
+    </LinearLayout>
 
 </FrameLayout>

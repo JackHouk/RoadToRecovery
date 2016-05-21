@@ -12,7 +12,7 @@
         jar="D:\Programs\Dyn\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="7077e5bda081066e035e8c73f4d72aa13dcb18ae">
+        sha1="47ac0cba00657265940111ada2eb681967583bed">
         <dex dex="D:\Programs\Dyn\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e3be69c2350e3a7d4771310d01b05057eada0d03\classes.dex" />
     </item>
     <item
@@ -33,7 +33,7 @@
         jar="D:\Programs\Dyn\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="e3ca072d1ec036990b88d23f5eef87e330601f64">
+        sha1="2fa3613c301584fdeefcfe7221955cea6132bba9">
         <dex dex="D:\Programs\Dyn\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fb101e4627d67ba4ff6878efb7a99de3a509e838\classes.dex" />
     </item>
     <item
