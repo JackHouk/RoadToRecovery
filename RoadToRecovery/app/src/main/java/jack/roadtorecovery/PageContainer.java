@@ -154,9 +154,9 @@ public class PageContainer extends AppCompatActivity {
                 case 1:
                     return "Network";
                 case 2:
-                    return "Info";
-                case 3:
                     return "Goals";
+                case 3:
+                    return "Info";
             }
             return null;
         }
