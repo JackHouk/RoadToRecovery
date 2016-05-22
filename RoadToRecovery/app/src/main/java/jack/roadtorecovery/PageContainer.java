@@ -1,5 +1,8 @@
 package jack.roadtorecovery;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -18,7 +21,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class PageContainer extends AppCompatActivity
@@ -26,11 +33,16 @@ public class PageContainer extends AppCompatActivity
         Goals.OnFragmentInteractionListener, Info.OnFragmentInteractionListener
 {
 
+    public final int NUMBER_OF_PAGES = 4;
     public void onFragmentInteraction(){
         return;
     }
     public void onFragmentInteraction(Uri uri){
         return;
+    }
+    public void buildContactView(ListView contactsView, GroupedListAdapter contactsArray){
+        contactsView = (ListView) findViewById(R.id.listView);
+        contactsView.setAdapter(contactsArray);
     }
 
     /**
@@ -53,10 +65,8 @@ public class PageContainer extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_container);
 
-        //Commented out to make custom bar
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the four
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -68,17 +78,17 @@ public class PageContainer extends AppCompatActivity
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
+    public void attachAddPerson(Button addPerson)
+    {
+        addPerson = (Button) findViewById(R.id.addPerson);
+        addPerson.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                Network.onAddPerson(PageContainer.this);
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -166,8 +176,8 @@ public class PageContainer extends AppCompatActivity
 
         @Override
         public int getCount() {
-            // Show 4 total pages.
-            return 4;
+            // Show 4 total pages
+            return NUMBER_OF_PAGES;
         }
 
         @Override
