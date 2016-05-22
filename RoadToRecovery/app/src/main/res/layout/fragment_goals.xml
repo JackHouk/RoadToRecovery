@@ -8,6 +8,88 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="GUD GOALS"
+        android:textAlignment="center"
+        android:background="#000000"
+        android:id="@+id/textview1"
+        android:textColor="#0134ff"
+        android:textSize="40dp" />
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"></LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Won the Day"
+            android:layout_gravity="center_vertical" />
+            android:onClick="wonthedaybuttonClicked"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="146dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            // Incrementing and Decrmenting number
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:layout_gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="70dp"
+                android:saveEnabled="false"
+                android:textAlignment="center"
+                android:id="@+id/counterTextView"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/textView"
+            android:layout_gravity="bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView2" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.85">
+
+        </LinearLayout><![CDATA[
+
+
+
+
+        >
+    ]]>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minor Setback"
+        android:layout_gravity="right|center_vertical"
+        android:onClick="minorsetbackbuttonClicked"/>
 </FrameLayout>
