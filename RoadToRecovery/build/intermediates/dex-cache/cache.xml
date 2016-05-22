@@ -9,24 +9,10 @@
         <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_278c4b01414caaeb9f9c9136398802e43ee19d4c\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_69c627760f763a519c7316dd39257e6d88d215e9\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_4c64470dd371010f77cfd5c8107036f60e5bf25b\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="30de94df3afabb78be2b6b98abe51c9006e6f0c4">
+        sha1="f7d1561bcd130d53446d10ea3d7aa13fdcbbd8de">
         <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a4bd614ded35791fd613ec80d73f80712fed6efa\classes.dex" />
     </item>
     <item
@@ -35,20 +21,6 @@
         revision="23.0.3"
         sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
         <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_a5f3188a0702deab3b4a2603e583a7de7a7c01da\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_f110676139e905fafd94b60981ec1d8494d80f9c\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="7c63a116a5e9da37a247b34536ef36808e41b8cb">
-        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_618925f20488a417a176aeb4749eb0044a9f75e7\classes.dex" />
     </item>
     <item
         jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
@@ -84,6 +56,34 @@
         revision="23.0.3"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
         <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_77c08d046fb6e5621183b167bf78257d22bbfe70\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_69c627760f763a519c7316dd39257e6d88d215e9\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_4c64470dd371010f77cfd5c8107036f60e5bf25b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_f110676139e905fafd94b60981ec1d8494d80f9c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a7cb75ab853591ec177a6a982e25a4cb7b8eaf5d">
+        <dex dex="C:\Users\Mintellechael\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_618925f20488a417a176aeb4749eb0044a9f75e7\classes.dex" />
     </item>
 
 </items>
