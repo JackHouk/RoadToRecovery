@@ -24,24 +24,50 @@ class GroupedListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
 
     public GroupedListAdapter(Context context) {
+        addSectionHeaderItem("Group: Uncategorized", 0);
         mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public void addItem(final String item) {
-        mData.add(item);
-        notifyDataSetChanged();
+    //TODO: Check for "Group: " at beginning of item vales and remove it to avoid conflict with group names
+    public void addItem(final String item, String sectionHeader) {
+        
+        sectionHeader = "Group: " + sectionHeader;
+        if(mData.size() == 0){
+            addSectionHeaderItem(sectionHeader, 0);
+            mData.add(item);
+            return;
+        }
+        String toCompare;
+        for (int i = 0; i < mData.size(); i++) {
+            toCompare = mData.get(i);
+            if (toCompare.compareTo(sectionHeader) == 0) {
+                mData.add(i + 1, item);
+                notifyDataSetChanged();
+                return;
+            }
+        }
+        for (int i = 0; i < mData.size(); i++) {
+            toCompare = "Group: Uncategorized";
+            if (toCompare.compareTo(mData.get(i)) == 0) {
+                addSectionHeaderItem(sectionHeader, i);
+                mData.add(i+1, item);
+                return;
+            }
+        }
     }
 
-    public void addSectionHeaderItem(final String item) {
-        mData.add(item);
-        sectionHeader.add(mData.size() - 1);
+    public void addSectionHeaderItem(final String item, int location) {
+        mData.add(location, item);
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemViewType(int position) {
-        return sectionHeader.contains(position) ? TYPE_SEPARATOR : TYPE_ITEM;
+        String groupLabel = "Group: ";
+        if(mData.get(position).length() > 6)
+            return (groupLabel == mData.get(position).substring(0, 6)) ? TYPE_SEPARATOR : TYPE_ITEM;
+        return TYPE_ITEM;
     }
 
     @Override

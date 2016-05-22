@@ -1,5 +1,8 @@
 package jack.roadtorecovery;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -20,6 +23,7 @@ import android.view.ViewGroup;
 
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -40,6 +44,7 @@ public class PageContainer extends AppCompatActivity
         contactsView = (ListView) findViewById(R.id.listView);
         contactsView.setAdapter(contactsArray);
     }
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -80,7 +85,7 @@ public class PageContainer extends AppCompatActivity
         addPerson = (Button) findViewById(R.id.addPerson);
         addPerson.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                Network.onAddPerson();
+                Network.onAddPerson(PageContainer.this);
             }
         });
     }

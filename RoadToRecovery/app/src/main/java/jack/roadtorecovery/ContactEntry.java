@@ -6,9 +6,9 @@ package jack.roadtorecovery;
  * there are no required fields
  */
 public class ContactEntry {
-    String mName;
-    String mPhone;
-    String mGroup;
+    public String mName;
+    public String mPhone;
+    public String mGroup;
 
     ContactEntry(String name, String phone, String group){
         mName = name;
