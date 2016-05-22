@@ -1,3 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_8c1fc4e7272b5eba48c6c5de7c2e0e08e00668fb\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_52eb3ef1f847bb09585dca8d15795c833d1ab949\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_84cc495a9ffc37fc089662daaa4603b706be23bb\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_fd4fc55c3601e964d09f89101d2f6f1311f181a5\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_15bc77aaafdecff090299c26fd0e9bd889700479\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_db4740bbe736fd3751b044148f960b9a93c093d8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_288676ff80ff1aee6eac06ca29d1f8c6284addb1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_94f7050790e1858a7cd72960f8edfa3f6870b615\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ef3bb900044ff32af846a36c3b56b379036c4592">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_540208a3456f86b7a6db70c66efb796f9551c9c1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="af6c562c8fbd105b7ffe9d7e39d0ca920eb723cb">
+        <dex dex="C:\Users\Jack\Documents\GitHub\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_44bcb89d413690927ca670185216453200e24338\classes.dex" />
+    </item>
+
+</items>
