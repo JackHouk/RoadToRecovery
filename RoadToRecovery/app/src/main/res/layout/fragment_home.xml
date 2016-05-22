@@ -2,12 +2,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jack.roadtorecovery.Home">
+    tools:context="jack.roadtorecovery.Home"
+    android:background="#ce0a0a">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@color/accent_material_dark">
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageButton"
+                android:focusable="false"
+                android:cropToPadding="false"
+                android:background="@mipmap/hback2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="bottom">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:text="&quot;The best way out is always through&quot;"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:autoText="false"
+                android:textSize="45dp"
+                android:textStyle="bold|italic"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@android:color/background_light"
+                android:editable="true"
+                android:singleLine="false"
+                android:focusable="true"
+                android:enabled="true"
+                android:clickable="false"
+                android:focusableInTouchMode="true"
+                android:contextClickable="true"
+                android:textIsSelectable="false" />
+
+        </LinearLayout>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="85dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="127dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="top"
+            android:background="@mipmap/profileimage" />
+
+    </LinearLayout>
 
 </FrameLayout>
