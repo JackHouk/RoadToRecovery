@@ -24,7 +24,7 @@ class GroupedListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
 
     public GroupedListAdapter(Context context) {
-        addSectionHeaderItem("Group: Uncategorized", 0);
+        addSectionHeaderItem("Group: Misc", 0);
         mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -33,7 +33,7 @@ class GroupedListAdapter extends BaseAdapter {
     public void addItem(final String item, String sectionHeader) {
 
         if(sectionHeader.compareTo("") == 0)
-            sectionHeader = "Group: Uncategorized";
+            sectionHeader = "Group: Misc";
         else
             sectionHeader = "Group: " + sectionHeader;
         String toCompare;
@@ -46,7 +46,7 @@ class GroupedListAdapter extends BaseAdapter {
             }
         }
         for (int i = 0; i < mData.size(); i++) {
-            toCompare = "Group: Uncategorized";
+            toCompare = "Group: Misc";
             if (toCompare.compareTo(mData.get(i)) == 0) {
                 addSectionHeaderItem(sectionHeader, i);
                 mData.add(i+1, item);
@@ -63,8 +63,8 @@ class GroupedListAdapter extends BaseAdapter {
     @Override
     public int getItemViewType(int position) {
         String groupLabel = "Group: ";
-        if(mData.get(position).length() > 6)
-            return (groupLabel == mData.get(position).substring(0, 6)) ? TYPE_SEPARATOR : TYPE_ITEM;
+        if(mData.get(position).length() > 6 && groupLabel.compareTo(mData.get(position).substring(0, 7)) == 0)
+                return TYPE_SEPARATOR;
         return TYPE_ITEM;
     }
 
@@ -94,12 +94,13 @@ class GroupedListAdapter extends BaseAdapter {
 
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = mInflater.inflate(R.layout.network_fragment_contact_entry, null);
             switch (rowType) {
                 case TYPE_ITEM:
+                    convertView = mInflater.inflate(R.layout.network_fragment_contact_entry, null);
                     holder.textView = (TextView) convertView.findViewById(R.id.contact);
                     break;
                 case TYPE_SEPARATOR:
+                    convertView = mInflater.inflate(R.layout.grouped_list_section, null);
                     holder.textView = (TextView) convertView.findViewById(R.id.contactHeader);
                     break;
             }
