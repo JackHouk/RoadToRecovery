@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="D:\Programs\Dyn\RoadToRecovery\RoadToRecovery\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7931fd0cd228733a13d03d1fe294ee8f087f9d46">
+        <dex dex="D:\Programs\Dyn\RoadToRecovery\RoadToRecovery\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e3be69c2350e3a7d4771310d01b05057eada0d03\classes.dex" />
+    </item>
+
+</items>
