@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class PageContainer extends AppCompatActivity
@@ -52,6 +53,10 @@ public class PageContainer extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_container);
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //Commented out to make custom bar
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
