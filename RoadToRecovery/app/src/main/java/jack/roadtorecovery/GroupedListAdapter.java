@@ -31,13 +31,11 @@ class GroupedListAdapter extends BaseAdapter {
 
     //TODO: Check for "Group: " at beginning of item vales and remove it to avoid conflict with group names
     public void addItem(final String item, String sectionHeader) {
-        
-        sectionHeader = "Group: " + sectionHeader;
-        if(mData.size() == 0){
-            addSectionHeaderItem(sectionHeader, 0);
-            mData.add(item);
-            return;
-        }
+
+        if(sectionHeader.compareTo("") == 0)
+            sectionHeader = "Group: Uncategorized";
+        else
+            sectionHeader = "Group: " + sectionHeader;
         String toCompare;
         for (int i = 0; i < mData.size(); i++) {
             toCompare = mData.get(i);
