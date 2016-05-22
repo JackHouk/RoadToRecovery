@@ -1,12 +1,26 @@
 package jack.roadtorecovery;
 
+import android.app.Activity;
 import android.content.Context;
+import android.app.AlertDialog;
+import android.widget.TextView;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import java.security.acl.Group;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -22,6 +36,18 @@ public class Network extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    //stored reference to activity's layout inflater
+    private static LayoutInflater mLi;
+    //Master list of contact entries
+    private static List contacts = new ArrayList<ContactEntry>();
+    //Contains and adapts the data array to be used in the contacts view
+    private static GroupedListAdapter contactsArray;
+    //ListView to display from ListAdapter
+    private static ListView contactsView;
+
+    private static TextView resultText;
+
+    private Button addPerson;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -51,6 +77,39 @@ public class Network extends Fragment {
         return fragment;
     }
 
+    public static void onAddPerson(Activity activ){
+        String name, phone, group;
+        LayoutInflater layoutInflater = LayoutInflater.from(activ);
+        View promptView = layoutInflater.inflate(R.layout.create_contact_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(activ);
+        alertDialogBuilder.setView(promptView);
+
+        final EditText editName = (EditText) promptView.findViewById(R.id.editname);
+        final EditText editPhone = (EditText) promptView.findViewById(R.id.editphone);
+        final EditText editGroup = (EditText) promptView.findViewById(R.id.editgroup);
+        // setup a dialog window
+        alertDialogBuilder.setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Network.contacts.add(new ContactEntry(editName.getText().toString(),
+                                                        editPhone.getText().toString(),
+                                                        editGroup.getText().toString()));
+                        ContactEntry toAdd = (ContactEntry)contacts.get(contacts.size() - 1);
+                        contactsArray.addItem(toAdd.mName, toAdd.mGroup);
+                    }
+                })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create an alert dialog
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,15 +122,17 @@ public class Network extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //save reference to layout inflater
+        mLi = inflater;
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_network, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        mListener.attachAddPerson(addPerson);
+        mListener.buildContactView(contactsView, contactsArray);
+        return;
     }
 
     @Override
@@ -83,7 +144,7 @@ public class Network extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-
+        contactsArray = new GroupedListAdapter(context);
     }
 
     @Override
@@ -104,6 +165,9 @@ public class Network extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction();
+        void buildContactView(ListView contactsView, GroupedListAdapter contactsArray);
+        void attachAddPerson(Button addPerson);
+        //void onAddPerson();
     }
 }
