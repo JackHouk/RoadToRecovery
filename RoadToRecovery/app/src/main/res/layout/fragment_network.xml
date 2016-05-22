@@ -6,11 +6,30 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="103dp"
+        android:layout_height="60dp"
+        android:text="+Person"
+        android:id="@+id/addPerson"
+        android:layout_gravity="right|bottom"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_gravity="right|bottom"
+        android:visibility="gone" />
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_gravity="center_horizontal|top"
+        android:layout_gravity="right|bottom"
         android:choiceMode="multipleChoice"
-        tools:listitem="@android:layout/simple_list_item_multiple_choice" />
+        tools:listitem="@android:layout/simple_list_item_1" />
 </FrameLayout>

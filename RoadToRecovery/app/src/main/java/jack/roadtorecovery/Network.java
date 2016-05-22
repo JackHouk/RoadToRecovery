@@ -4,9 +4,18 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import java.security.acl.Group;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -22,6 +31,14 @@ public class Network extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    //Master list of contact entries
+    private static List contacts = new ArrayList<ContactEntry>();
+    //Contains and adapts the data array to be used in the contacts view
+    private static GroupedListAdapter contactsArray;
+    //ListView to display from ListAdapter
+    private static ListView contactsView;
+
+    private Button addPerson;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -67,10 +84,19 @@ public class Network extends Fragment {
         return inflater.inflate(R.layout.fragment_network, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        mListener.attachAddPerson(addPerson);
+        mListener.buildContactView(contactsView, contactsArray);
+        return;
+    }
+
+    public static void onAddPerson() {
+        if (contactsArray != null) {
+            String name, phone, group;
+
+            contacts.add(new ContactEntry());
+            contactsArray.addItem("Joe Jones");
         }
     }
 
@@ -83,7 +109,7 @@ public class Network extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-
+        contactsArray = new GroupedListAdapter(context);
     }
 
     @Override
@@ -104,6 +130,8 @@ public class Network extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction();
+        void buildContactView(ListView contactsView, GroupedListAdapter contactsArray);
+        void attachAddPerson(Button addPerson);
     }
 }
